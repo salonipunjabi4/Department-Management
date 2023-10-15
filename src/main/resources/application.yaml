@@ -1,0 +1,24 @@
+server:
+  port: 8080
+
+spring:
+
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    password: mscs@0407
+    url: jdbc:mysql://localhost:3306/testdb
+    username: root
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+welcome:
+  message: Welcome to Saloni's Project!
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+        exclude: "env,beans"
+
